@@ -22,9 +22,15 @@ export function loadConfig(cwd: string): FactoryConfig {
     return {
       orchestratorUrl: (result["orchestratorUrl"] as string) || DEFAULT_CONFIG.orchestratorUrl,
       defaultEnvironment: (result["defaultEnvironment"] as string) || DEFAULT_CONFIG.defaultEnvironment,
-      defaultLimit: parseInt(result["defaultLimit"] as string) || DEFAULT_CONFIG.defaultLimit,
-      requestTimeout: parseInt(result["requestTimeout"] as string) || DEFAULT_CONFIG.requestTimeout,
-      maxLogLines: parseInt(result["maxLogLines"] as string) || DEFAULT_CONFIG.maxLogLines,
+      const defaultLimit = parseInt(result["defaultLimit"] as string);
+      const requestTimeout = parseInt(result["requestTimeout"] as string);
+      const maxLogLines = parseInt(result["maxLogLines"] as string);
+    return {
+      orchestratorUrl: (result["orchestratorUrl"] as string) || DEFAULT_CONFIG.orchestratorUrl,
+      defaultEnvironment: (result["defaultEnvironment"] as string) || DEFAULT_CONFIG.defaultEnvironment,
+      defaultLimit: isNaN(defaultLimit) ? DEFAULT_CONFIG.defaultLimit : defaultLimit,
+      requestTimeout: isNaN(requestTimeout) ? DEFAULT_CONFIG.requestTimeout : requestTimeout,
+      maxLogLines: isNaN(maxLogLines) ? DEFAULT_CONFIG.maxLogLines : maxLogLines,
     };
   } catch {
     return { ...DEFAULT_CONFIG };
