@@ -11,15 +11,14 @@
     "job-dispatch",
     "workflow"
   ],
-  "author": "nandal <nandal@users.noreply.github.com>",
+  "author": "BytesBrains Pte Ltd (https://bytesbrains.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nandal/pi-ext",
-    "directory": "factory-gate"
+    "url": "git+https://github.com/bytesbrains/pi-factory-gate.git"
   },
-  "homepage": "https://github.com/nandal/pi-ext/tree/main/factory-gate",
+  "homepage": "https://github.com/bytesbrains/pi-factory-gate#readme",
   "bugs": {
-    "url": "https://github.com/nandal/pi-ext/issues"
+    "url": "https://github.com/bytesbrains/pi-factory-gate/issues"
   },
   "license": "MIT",
   "main": "./src/index.ts",

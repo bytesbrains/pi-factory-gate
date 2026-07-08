@@ -81,3 +81,8 @@ This gate works with the [wrok.in](https://github.com/nandal/wrok.in) AI Factory
 ## License
 
 MIT
+
+---
+
+Built and maintained by [BytesBrains](https://bytesbrains.com) — AI automation & agents, engineered to production standards.
+*The model proposes, code guarantees.*
